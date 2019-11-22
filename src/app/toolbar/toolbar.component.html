@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <img src="../../assets/images/caoviver.png" class="imagem">
+        <button mat-flat-button color="primary">Animais</button>
+        <button mat-flat-button color="primary">Doação</button>
+        <span class="example-spacer"></span>
+        <button mat-flat-button color="primary" *ngIf="usuario">
+            <span>Olá, {{usuario}}</span>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon>
+        </button>
+        <button mat-flat-button color="primary" *ngIf="!usuario">
+                <span>Login</span>
+                <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">person</mat-icon>
+            </button>
+    </mat-toolbar-row>
+</mat-toolbar>
