@@ -4,11 +4,11 @@
         <button mat-flat-button color="primary">Animais</button>
         <button mat-flat-button color="primary">Doação</button>
         <span class="example-spacer"></span>
-        <button mat-flat-button color="primary" *ngIf="usuario">
-            <span>Olá, {{usuario}}</span>
+        <button mat-flat-button color="primary" *ngIf="userDisplay" (click)="Logout()">
+            <span>Olá, {{userDisplay}}</span>
             <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon>
         </button>
-        <button mat-flat-button color="primary" *ngIf="!usuario">
+        <button mat-flat-button color="primary" *ngIf="!userDisplay" (click)="Login()">
                 <span>Login</span>
                 <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">person</mat-icon>
             </button>

@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { AnimaisComponent } from './animais/animais.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/login',
+    redirectTo: '/animais',
     pathMatch: 'full'
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'animais',
+    component: AnimaisComponent
   }
 ];
 
