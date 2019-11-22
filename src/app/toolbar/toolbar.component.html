@@ -1,12 +1,14 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <img src="../../assets/images/caoviver.png" class="imagem">
-        <button mat-flat-button color="primary">Animais</button>
-        <button mat-flat-button color="primary">Doação</button>
+        <button mat-flat-button color="primary" class="flex justify-center">Animais</button>
+        <button mat-flat-button color="primary" class="flex justify-center">Doação</button>
         <span class="example-spacer"></span>
         <button mat-flat-button color="primary" *ngIf="userDisplay" (click)="Logout()">
-            <span>Olá, {{userDisplay}}</span>
-            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon>
+            <div class="flex">"
+                <div class="ellipsis">Olá, {{userDisplay ? userDisplay : '-'}}</div>
+                <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon>
+            </div>
         </button>
         <button mat-flat-button color="primary" *ngIf="!userDisplay" (click)="Login()">
                 <span>Login</span>
