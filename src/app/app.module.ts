@@ -26,6 +26,8 @@ import { DoacaoComponent } from './doacao/doacao.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { config } from 'config';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { config } from 'config';
     MatCheckboxModule,
     MatNativeDateModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [{provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}],
   bootstrap: [AppComponent],
