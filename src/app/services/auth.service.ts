@@ -108,12 +108,12 @@ export class AuthService {
       this._snackBar.open('Animal deletado.', null, {
         duration: 2000,
       });
-    })
+    }.bind(this))
     .catch(function() {
       this._snackBar.open('Erro ao deletar animal.', null, {
         duration: 2000,
       });
-    });
+    }.bind(this));
     this.listarAnimais();
   }
 
@@ -129,11 +129,11 @@ export class AuthService {
       this._snackBar.open('Animal adicionado.', null, {
         duration: 2000,
       });
-    }).catch(function() {
+    }.bind(this)).catch(function() {
       this._snackBar.open('Erro ao adicionar animal', null, {
         duration: 2000,
       });
-    });
+    }.bind(this));
     this.listarAnimais();
   }
 
@@ -148,11 +148,11 @@ export class AuthService {
       this._snackBar.open('Doação efetuada, obrigado!', null, {
         duration: 2000,
       });
-    }).catch(function() {
+    }.bind(this)).catch(function() {
       this._snackBar.open('Erro ao efetuar doação, tente novamente', null, {
         duration: 2000,
       });
-    });
+    }.bind(this));
   }
 
   getTotalDoado() {
