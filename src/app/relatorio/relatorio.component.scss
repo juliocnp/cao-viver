@@ -1,8 +1,9 @@
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    p {
-        align-self: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    .card {
+        margin: 8px;
     }
 }
