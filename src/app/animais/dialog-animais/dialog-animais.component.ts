@@ -33,7 +33,7 @@ export class DialogAnimaisComponent implements OnInit {
       this.id = dataAtual.getDate().toString()
         + dataAtual.getMonth().toString()
         + dataAtual.getFullYear().toString()
-        + dataAtual.getSeconds().toString();
+        + dataAtual.getMilliseconds().toString();
     }
   }
 
