@@ -1,19 +1,21 @@
 <div class="container">
     <mat-card class="card">
         <mat-card-header>
+                <mat-icon> attach_money</mat-icon>
             <mat-card-title>Total de doações</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <p>R$ {{totalDoado}}</p>
+            <p>R$ {{totalDoado | number : '1.2-2'}}</p>
         </mat-card-content>
     </mat-card>
     <mat-card class="card">
         <mat-card-header>
+            <mat-icon>pets</mat-icon>
             <mat-card-title>Animais: {{totalAnimais}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <p>Total de animais doados: {{totalDoados}}</p>
-            <p>Total de animais a doar: {{totalADoar}}</p>
+            <p class="verde">Total de animais doados: {{totalDoados}}</p>
+            <p class="vermelho">Total de animais a doar: {{totalADoar}}</p>
         </mat-card-content>
     </mat-card>
 </div>
