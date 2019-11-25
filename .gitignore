@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 #config
-config.model.ts
+config.ts

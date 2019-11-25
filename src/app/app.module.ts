@@ -12,7 +12,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AnimaisComponent } from './animais/animais.component';
-import { Config } from 'config.model';
 import { CardComponent } from './animais/card/card.component';
 import { DialogAnimaisComponent } from './animais/dialog-animais/dialog-animais.component';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -26,9 +25,7 @@ import { MatCardModule } from '@angular/material/card';
 import { DoacaoComponent } from './doacao/doacao.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
-
-const config = new Config();
+import { config } from 'config';
 
 @NgModule({
   declarations: [
