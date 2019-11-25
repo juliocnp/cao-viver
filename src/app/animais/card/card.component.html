@@ -1,0 +1,13 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title><span class="adotado" *ngIf="animal.adotado">[ADOTADO] </span>{{animal.nome}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{animal.fotoURL}}" alt="Foto do animal">
+    <mat-card-content>
+        <p>{{animal.descricao}}</p>
+    </mat-card-content>
+    <mat-card-actions class="flex justify-around">
+        <button mat-button color="warn" *ngIf="userAdmin" (click)="deletar()">DELETAR</button>
+        <button mat-button color="primary" *ngIf="userAdmin" (click)="atualizar()">ATUALIZAR</button>
+    </mat-card-actions>
+</mat-card>

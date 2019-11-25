@@ -1,0 +1,8 @@
+<div class="container">
+    <form>
+        <mat-form-field class="input">
+            <input matInput placeholder="Valor" type="number" [(ngModel)]="valor" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+    </form>
+    <button class="botao" mat-raised-button color="primary" (click)="doar()">Doar</button>
+</div>

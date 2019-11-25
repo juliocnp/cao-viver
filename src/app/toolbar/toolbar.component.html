@@ -1,18 +1,21 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
         <img src="../../assets/images/caoviver.png" class="imagem">
-        <button mat-flat-button color="primary" class="flex justify-center">Animais</button>
-        <button mat-flat-button color="primary" class="flex justify-center">Doação</button>
-        <span class="example-spacer"></span>
+        <button mat-flat-button color="primary" class="flex justify-center" (click)="animais()">Animais</button>
+        <button mat-flat-button color="primary" class="flex justify-center" (click)="relatorio()" *ngIf="userAdmin">Relatório</button>
+        <button mat-flat-button color="primary" class="flex justify-center" (click)="doacao()" *ngIf="!userAdmin">Doação</button>
+        <span class="spacer"></span>
         <button mat-flat-button color="primary" *ngIf="userDisplay" (click)="Logout()">
-            <div class="flex">"
-                <div class="ellipsis">Olá, {{userDisplay ? userDisplay : '-'}}</div>
-                <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon>
+            <div class="flex">
+                <div class="ellipsis">
+                    <span>Olá, {{userDisplay ? userDisplay : '-'}}</span>
+                </div>
+                <mat-icon class="icon icon--padding" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon>
             </div>
         </button>
         <button mat-flat-button color="primary" *ngIf="!userDisplay" (click)="Login()">
                 <span>Login</span>
-                <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">person</mat-icon>
+                <mat-icon class="icon" aria-hidden="false" aria-label="Example heart icon">person</mat-icon>
             </button>
     </mat-toolbar-row>
 </mat-toolbar>

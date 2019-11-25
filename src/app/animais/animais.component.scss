@@ -1,0 +1,25 @@
+.container {
+    height: calc(100vh - 78px);
+    @media (max-width: 599px) {
+        height: calc(100vh - 70px);
+    }
+    padding-top: 14px;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: auto;
+    .card {
+        max-width: 300px;
+        margin: 20px;
+    }
+    .button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        .text-button {
+            font-size: 24px;
+        }
+    }
+}
+

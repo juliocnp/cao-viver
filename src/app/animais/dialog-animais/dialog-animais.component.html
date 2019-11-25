@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 *ngIf="!alterar">Adicionar animal</h1>
+    <h1 *ngIf="alterar">Alterar animal</h1>
+    <form>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Nome" [(ngModel)]="nome" value="nome" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <textarea matInput placeholder="Descrição" [(ngModel)]="descricao" value="descricao" [ngModelOptions]="{standalone: true}"></textarea>
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Chegada" [(ngModel)]="chegada"[ngModelOptions]="{standalone: true}">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-checkbox class="margin-top" [(ngModel)]="adotado" [ngModelOptions]="{standalone: true}">Adotado</mat-checkbox>
+
+    </form>
+    <input type="file" (change)="onFileChanged($event)" class="full-width margin-top" accept=".png,.jpg">
+    <button class="margin-top" mat-raised-button color="primary" (click)="adicionar()">Adicionar</button>
+</div>

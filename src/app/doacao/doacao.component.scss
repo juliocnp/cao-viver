@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    width: 100vw;
+
+    .botao {
+        height: 34px;
+        align-self: center;
+        margin-left: 8px;
+    }
+}

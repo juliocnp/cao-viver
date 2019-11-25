@@ -1,1 +1,9 @@
-<p>animais works!</p>
+<div class="container">
+    <div class="card" *ngFor="let animal of listaAnimais">
+        <app-card [hidden]="!userAdmin && animal.adotado" [animal]="animal"></app-card>
+    </div>
+    <div *ngIf="userAdmin" class="button">
+        <button mat-fab color="primary"><span class="text-button" (click)="openModal()">+</span></button>
+    </div>
+</div>
+
